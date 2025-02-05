@@ -1,0 +1,94 @@
+
+<!-- saved from url=(0090)file:///D:/SISKAMANDASARI%20HAREFA%20(%20DASAR%20K%20)/RENDIB%20PUTRA%20ANDIUKA%20Xii.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Aplikasi Kalkulator Sederhana </title>
+        <style>
+            body{
+                background-colour: aqua;
+                font-family:mmonospace;
+            }
+                table{
+                    width: 320px;
+                    margin: 40px auto;
+                    background-colour: white;
+                    border-colour: white;
+                }
+                td{
+                    width: 25%;
+                    border-colour: white;
+                }
+                button{
+                    height: 70px;
+                    font-size: 30px;
+                    border: none;
+                    text-align: center;
+                    width: 100%;
+                }
+                #inputLabel{
+                    height: 100px;
+                    font-size: 60px;
+                    background-colour: #dedbdb;
+                    vertical-align:bottom;
+                    text-align:right;
+
+                }
+                </style>
+                </head>
+                <body>
+                    
+                            &gt;
+                            <table border="" cellspacing="0">
+                    <tbody><tr>
+                        <td colspan="4" id="inputLabel">0</td>   
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="tombol(this)">AC</button></td>
+                        <td><button onclick="tombol(this)">Del</button></td>
+                        <td><button onclick="tombol(this)">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="tombol(this)">7</button></td>
+                        <td><button onclick="tombol(this)">8</button></td>
+                        <td><button onclick="tombol(this)">9</button></td>
+                        <td><button onclick="tombol(this)">*</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="tombol(this)">4</button></td>
+                            <td><button onclick="tombol(this)">5</button></td>
+                            <td><button onclick="tombol(this)">6</button></td>
+                            <td><button onclick="tombol(this)">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="tombol(this)">1</button></td>
+                            <td><button onclick="tombol(this)">2</button></td>
+                            <td><button onclick="tombol(this)">3</button></td>
+                            <td><button onclick="tombol(this)">+</button></td></tr>
+                            <tr>
+                                <td colspan="2"><button onclick="tombol(this)">0</button></td>
+                                <td><button onclick="tombol(this)">.</button></td>
+                                <td><button onclick="tombol(this)">=</button></td>
+                            </tr>
+                        </tbody></table>
+                        <script>
+
+                            var inputLabel=document.getElemenByid('inputLabel');
+
+                            function tombol(obj){
+                                var kondisi=obj.innerHTML;
+                                if(kondisi=="="){
+                                    inputLabel.innerHTML=eval(inputLabel.innerHTML);
+                                }else if(kondisi=="AC"){
+                                    inputLabel.innerHTML="0";
+                                }else if(kondisi=="Del"){
+                                    inputLabel.innerHTML=inputLabel.innerHTML.slice(0,-1)||'0';
+                                }else{
+                                    if(inputLabel.innerHTML=="0"){
+                                        inputLabel.innerHTML=kondisi;
+                                    }else{
+                                        inputLabel.innerHTML=+kondisi;
+                                }
+                            }
+                        }
+                        </script>
+                        
+</body></html>
